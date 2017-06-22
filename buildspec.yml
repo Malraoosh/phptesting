@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-
 phases:
   install:
     commands:
@@ -17,4 +13,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+  artifacts:
+    files:
+      - test.php
 discard-paths: yes
